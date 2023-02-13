@@ -1,0 +1,31 @@
+.slider
+  padding-bottom: 40px
+  &__inner
+    position: relative
+  &__item
+    img
+      border-radius: 30px
+      max-height: 600px
+      margin: 0 auto
+
+.slick-dots
+  display: flex
+  justify-content: center
+  column-gap: 20px
+  position: absolute
+  bottom: 20px
+  left: 50%
+  transform: translateX(-50%)
+  li
+    button
+      font-size: 0
+      background-color: transparent
+      border: 2px solid #3167cb
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      transition: all .3s
+      cursor: pointer
+    &.slick-active
+      button
+        background-color: #3167cb

@@ -1,0 +1,32 @@
+=flex-center ()
+  display: flex
+  justify-content: center
+  align-items: center
+
+=fontHasOtf ($name, $pathWoff2, $pathWoff, $pathOtf)
+  @font-face
+    font:
+      family: $name
+      style: normal
+      display: swap
+    src: local($name), url($pathWoff2) format('woff2'), url($pathWoff) format('woff'), url($pathOtf) format('opentype')
+
+=font ($name, $w, $pathWoff2, $pathWoff)
+  @font-face
+    font:
+      family: $name
+      weight: $w
+      style: normal
+      display: swap
+    src: local($name), url($pathWoff2) format('woff2'), url($pathWoff) format('woff')
+
+=bgp($path, $s, $pos1, $pos2 )
+  background:
+    repeat: no-repeat
+    image: url($path)
+    size: $s
+    position: $pos1 $pos2
+
+=fz($fz, $lh)
+  font-size: $fz
+  line-height: $lh
